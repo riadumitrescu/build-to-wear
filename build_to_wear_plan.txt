@@ -1,0 +1,250 @@
+Build to Wear – Website Structure & Design Plan (Optimized for GitHub Pages)
+
+🌐 General Setup
+
+Platform: GitHub Pages
+Design Goals: Clean, minimal, poetic, and highly usable. Should reflect intentional UI/UX design and elegant simplicity. Mobile-first, interactive, and fast-loading.
+
+Fonts:
+Headings: DM Serif Display (Google Fonts)
+Body: Inter (Google Fonts)
+
+Color Palette:
+Dark Base: Ink Black #1A1A1A
+Light Base: Paper White #F7F7F5
+Accent: Deep Coral #E95454 (a slightly darker, richer tone than #FF6B6B)
+
+Global Components:
+Navbar:
+Logo: logo.svg
+Site Title: Build to Wear
+Navigation Links: Home | 10 Founders
+Sticky on scroll, subtle shadow
+
+Footer (on all pages):
+Simple, monochrome
+Include copyright, email/contact, and social
+
+Interactivity:
+Smooth scroll transitions
+Scroll-based section animations
+Button hover states (e.g. color shift or underline)
+Lazy-loading images
+Responsive across devices
+
+🏠 Homepage (index.html)
+1. Hero Section
+Fullscreen layout
+Centered serif headline:
+10 Creators. 10 Stories. One Hoodie at a Time.
+We turn your creative journey into something you can wear.
+CTA Button: Apply for Founders Drop (scrolls or links to Founders page)
+
+2. Idea / Short Pitch Section
+2-column layout (text left, image right)
+Image: folded_hoodie.png
+Text: Short, poetic pitch (e.g., “Not merch. Not branding. A story you can wear.”)
+
+3. Mission Statement Section
+Light background, serif heading
+We believe every creator deserves to be seen — not as a logo, but as a process.
+
+4. Problem–Solution Section
+Split layout with alternating content or visually styled columns
+Headings:
+Problem: Portfolios are flat. Resumes are cold. Merch is shallow.
+Solution: A hoodie that speaks. A blog that documents. A story that stays.
+
+5. CTA / Call-to-Join Section
+
+6. Newsletter Signup
+Embedded form via Buttondown:
+
+<iframe
+scrolling="no"
+style="width:100%!important;height:220px;border:1px #ccc solid !important"
+src="https://buttondown.com/dumitrescu?as_embed=true"
+></iframe><br /><br />
+
+Place after final CTA or before footer
+Include a short description:
+Get quiet updates from Build to Wear — behind-the-scenes, future drops, and creator stories.
+
+6. Footer
+Same across all pages
+Includes:
+Contact info or email (if desired)
+Social icons linking to:
+Instagram: @buildtowear
+LinkedIn: Build to Wear on LinkedIn
+Simple copyright
+
+🔧 Founders Page (founders.html)
+1. Hero Section
+Become one of the 10 Founders of Build to Wear.
+Turn your work into something others can see — and feel.
+
+2. What You Get Section
+Clean 3-column or stacked layout with icons or illustrations:
+🧵 A custom hoodie designed around your work
+📓 A blog-style story feature about you
+🔗 A QR code that links to your portfolio
+
+3. Application Form Embed
+
+4. Invite a Friend Feature
+Add a button labeled Invite a Friend
+On click, this will:
+Copy a short pitch and application link to clipboard:
+"Hey! Check this out — Build to Wear is creating custom hoodies based on people's work. They're picking 10 creators right now. You should apply! → [insert your link]"
+Show a small toast notification like: "Copied! Now share it anywhere."
+Optionally ask: "Open WhatsApp / Messages / Twitter?" with buttons to those apps
+Implement with simple JavaScript clipboard API and modal/toast animation
+
+4. Footer
+Identical to homepage footer
+
+🧠 Development Recommendations
+🔤 Language + Framework Setup
+To keep things sustainable, simple, and easy to manage on GitHub Pages, use the following:
+
+Frontend Stack:
+HTML5 – Semantic and accessible
+CSS3 (with variables) – Clean, theme-able styling system
+JavaScript (Vanilla) – For clipboard, animations, modal popups, toast notifications
+
+Optional Libraries:
+AOS.js – Lightweight scroll animations
+GSAP – Smooth micro-interactions (if needed)
+
+Font Integration:
+DM Serif Display and Inter via Google Fonts CDN
+
+Icons:
+Use inline SVGs or Heroicons for scalable, branded UI
+
+Mobile Responsiveness:
+Flexbox and CSS Grid for layout
+clamp() and min() for responsive font sizes
+Media queries for breakpoints
+
+Folder Structure:
+/build-to-wear/
+├── index.html
+├── founders.html
+├── /assets/
+│   ├── /img/
+│   │   └── folded_hoodie.png
+│   ├── /fonts/
+│   └── /icons/
+├── /css/
+│   └── style.css
+├── /js/
+│   └── main.js
+├── README.md
+
+Accessibility:
+Use proper heading structure (h1, h2, h3...)
+Add aria-labels to buttons and icons
+Make everything keyboard-accessible
+
+SEO Essentials:
+Add <meta name="description">, OpenGraph tags, favicon
+Page titles unique per page
+
+Extras to Add:
+Dark Mode toggle (CSS variables + JS toggle)
+Modal confirmation after email subscription
+Smooth scroll + hover animations on buttons and CTAs
+
+🧵 404 Page (404.html)
+Purpose:
+A poetic, on-brand error page that fits the voice and vibe of Build to Wear.
+Headline:
+This page doesn’t exist yet — just like the hoodie you're about to build.
+Clean serif type
+Optional button to return to homepage
+Soft animation or fading hoodie icon (optional)
+
+🖼️ Meta Tags + Social Sharing
+Add the following to the <head> of every HTML page:
+
+<meta property="og:title" content="Build to Wear">
+<meta property="og:description" content="Turn your process into something wearable. 10 creators. 10 stories.">
+<meta property="og:image" content="/assets/img/folded_hoodie.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+
+Ensure these tags are dynamic if needed later (using JS or separate HTML templates)
+
+🛍️ Order Page (order.html)
+Purpose:
+A standalone purchase page offering tiered hoodie packages — not linked yet to the homepage or founders page. This page will follow the same visual and UI/UX branding.
+
+1. Hero Section
+Want to wear your work?
+Choose a package and we’ll build your story into a hoodie.
+CTA: Choose Your Package
+
+2. Packages Section (3 Tiers)
+Styled as elegant cards or stacked panels, matching brand fonts/colors
+
+🧵 Tier 1 – Essentials
+Custom hoodie with minimal visual personalization (QR code + name or quote)
+PDF layout preview
+Price: e.g., $35 + shipping
+
+✍️ Tier 2 – Signature
+Hoodie with curated visuals + quote + link + 1 image
+Blog-style feature on the site
+Scannable QR code
+Price: e.g., $60 + shipping
+
+🔥 Tier 3 – Founder's Edition
+Fully custom hoodie design
+Dedicated story page
+Bonus sticker pack + zine-style PDF
+Optional voice quote on QR scan
+Price: e.g., $95 + shipping
+
+3. How It Works Section
+Step-by-step visual (1. Choose Tier → 2. Submit Info → 3. Hoodie Ships)
+Add iconography or soft grid layout
+
+4. Order Form Section
+Basic embedded form (Google Form / Tally) to capture:
+Name, Email, Shipping address, Tier selection, Hoodie size + color, Portfolio or content to include
+
+5. Footer
+Same as the homepage + founders page footer
+
+📈 Analytics
+Option 2: Google Analytics (if you need more detailed tracking)
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78T2M8QE85"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-78T2M8QE85');
+</script>
+
+✅ Thank You Page / Confirmation Modal
+Option 1: `/thanks.html` (Static Page)
+Redirect form submissions to a simple static page
+
+Option 2: Modal Popup (On-Site Feedback)
+After form submission, show a soft animated modal (with fade-in)
+
+✅ Strategic Additions to Consider
+4. GitHub Deployment Automation
+Set up GitHub Actions that trigger deploy on push to main
+
+5. Sitemap + robots.txt
+Create sitemap.xml and robots.txt to enable indexing
+
+📝 Technical Notes
+HTML/CSS structure only (static site)
+Assets stored in /assets/
+Font files from Google Fonts
+Animations via vanilla JS or libraries

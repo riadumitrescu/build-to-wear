@@ -1,0 +1,147 @@
+Build to Wear - Design & Development Mandates
+===========================================
+
+Last Updated: 2024-04-02
+
+🎨 Design Principles
+------------------
+1. Minimalism
+   - Clean, uncluttered layouts
+   - Whitespace is essential
+   - Typography-driven design
+   - Focus on content
+
+2. Typography
+   - DM Serif Display for headings (MANDATORY)
+   - Inter for body text (MANDATORY)
+   - Responsive font sizing
+   - Clear hierarchy
+
+3. Colors
+   - Ink Black (#1A1A1A) for text (MANDATORY)
+   - Paper White (#F7F7F5) for backgrounds (MANDATORY)
+   - Deep Coral (#E95454) for accents (MANDATORY)
+   - Limited color palette
+
+4. Spacing
+   - Consistent spacing system
+   - Responsive margins and padding
+   - Breathing room between elements
+   - Mobile-first approach
+
+5. Components
+   - Simple, reusable elements
+   - Clear visual hierarchy
+   - Consistent styling
+   - Accessible by default
+
+🚀 Performance Requirements
+-------------------------
+1. Loading Speed
+   - Under 2 seconds initial load (MANDATORY)
+   - Lazy loading for images
+   - Optimized assets
+   - Minimal JavaScript
+
+2. Responsiveness
+   - Mobile-first approach (MANDATORY)
+   - Fluid typography
+   - Flexible layouts
+   - Touch-friendly targets
+
+3. Accessibility
+   - WCAG 2.1 AA compliance (MANDATORY)
+   - Keyboard navigation
+   - Screen reader support
+   - Color contrast requirements
+
+4. SEO
+   - Semantic HTML (MANDATORY)
+   - Meta descriptions
+   - Open Graph tags
+   - Structured data
+
+💻 Development Standards
+----------------------
+1. Code Quality
+   - Clean, semantic HTML
+   - BEM CSS methodology
+   - Vanilla JavaScript
+   - No unnecessary dependencies
+
+2. File Structure
+   - Organized directories
+   - Clear naming conventions
+   - Modular components
+   - Separate concerns
+
+3. Version Control
+   - Semantic versioning
+   - Clear commit messages
+   - Feature branches
+   - Regular backups
+
+4. Documentation
+   - Clear comments
+   - README updates
+   - Component documentation
+   - API documentation
+
+📱 User Experience
+----------------
+1. Navigation
+   - Clear hierarchy
+   - Consistent placement
+   - Mobile-friendly menu
+   - Smooth scrolling
+
+2. Forms
+   - Clear labels
+   - Helpful error messages
+   - Progress indicators
+   - Success feedback
+
+3. Content
+   - Clear hierarchy
+   - Scannable text
+   - Visual breaks
+   - Progressive disclosure
+
+4. Interactions
+   - Smooth animations
+   - Clear feedback
+   - Predictable behavior
+   - Error prevention
+
+🔒 Security
+----------
+1. Data Protection
+   - Secure form submission
+   - HTTPS only
+   - Input validation
+   - XSS prevention
+
+2. Privacy
+   - GDPR compliance
+   - Cookie consent
+   - Data minimization
+   - Clear policies
+
+3. Authentication
+   - Secure login
+   - Password requirements
+   - Session management
+   - Rate limiting
+
+4. Monitoring
+   - Error tracking
+   - Performance monitoring
+   - Security scanning
+   - Regular updates
+
+Notes
+-----
+- These mandates are non-negotiable
+- Regular review and updates needed
+- All team members must follow
+- Document any exceptions 
