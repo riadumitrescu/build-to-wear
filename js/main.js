@@ -130,20 +130,15 @@ forms.forEach(form => {
 });
 
 // Load footer component
-async function loadFooter() {
-    try {
-        const response = await fetch('/components/footer.html');
-        const footerHtml = await response.text();
-        document.body.insertAdjacentHTML('beforeend', footerHtml);
-    } catch (error) {
-        console.error('Error loading footer:', error);
-    }
-}
+fetch('/components/footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.querySelector('footer').outerHTML = data;
+    })
+    .catch(error => console.error('Error loading footer:', error));
 
 // Initialize components
 document.addEventListener('DOMContentLoaded', () => {
-    loadFooter();
-    
     // Add smooth scroll behavior to all internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -153,4 +148,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-}); 
+});
+
+// Load structured data
+const structuredDataScript = document.createElement('script');
+structuredDataScript.src = 'js/structured-data.js';
+document.head.appendChild(structuredDataScript); 
