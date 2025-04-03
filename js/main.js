@@ -129,14 +129,6 @@ forms.forEach(form => {
   });
 });
 
-// Load footer component
-fetch('/components/footer.html')
-    .then(response => response.text())
-    .then(data => {
-        document.querySelector('footer').outerHTML = data;
-    })
-    .catch(error => console.error('Error loading footer:', error));
-
 // Initialize components
 document.addEventListener('DOMContentLoaded', () => {
     // Add smooth scroll behavior to all internal links
