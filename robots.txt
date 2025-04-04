@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /founders
+Allow: /contact
+Disallow: /thank-you
+Disallow: /404.html
+Sitemap: https://buildtowear.com/sitemap.xml 

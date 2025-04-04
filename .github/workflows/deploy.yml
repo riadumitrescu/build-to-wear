@@ -1,0 +1,63 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Cache assets
+        uses: actions/cache@v3
+        with:
+          path: |
+            assets/img
+            assets/mockups
+            assets/fabrics
+            assets/logo
+          key: ${{ runner.os }}-assets-${{ hashFiles('**/*.png', '**/*.jpg', '**/*.svg') }}
+          restore-keys: |
+            ${{ runner.os }}-assets-
+            
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          cname: buildtowear.com
+          commit_message: ${{ github.event.head_commit.message }}
+          force_orphan: true
+          
+      - name: Configure caching headers
+        run: |
+          echo "/*.html: 3600" > _headers
+          echo "/*.css: 3600" >> _headers
+          echo "/*.js: 3600" >> _headers
+          echo "/*.png: 86400" >> _headers
+          echo "/*.jpg: 86400" >> _headers
+          echo "/*.svg: 86400" >> _headers
+          echo "/*.woff2: 86400" >> _headers
+          echo "/*.woff: 86400" >> _headers
+          echo "/*.ttf: 86400" >> _headers
+          echo "/*.eot: 86400" >> _headers
+          echo "/*.ico: 86400" >> _headers
+          
+      - name: Upload headers
+        uses: actions/upload-artifact@v3
+        with:
+          name: _headers
+          path: _headers 

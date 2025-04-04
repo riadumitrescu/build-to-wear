@@ -113,4 +113,89 @@ Notes
 - Focus on performance and user experience
 - Maintain consistent design language
 - Keep documentation up to date
-- Regular testing and optimization 
+- Regular testing and optimization
+
+[2024-03-21] Shop Page Implementation
+- Created shop.html with founders tier and regular price tiers
+- Added CSS styles for shop page components including:
+  - Tier cards with hover effects
+  - Founders tier with gradient background
+  - Product details section with grid layout
+  - Responsive design for mobile devices
+- Features:
+  - Founders tier (£0 + shipping & printing)
+  - Standard tier (£49)
+  - Premium tier (£69)
+  - Limited Edition tier (£89)
+  - Product details with sustainable materials info
+  - Size guide link
+  - Quality guarantee
+  - Ethical manufacturing details
+
+[2024-03-21] Shop Page Updates
+- Converted all prices from GBP to USD:
+  * Founders Tier: $0 (plus shipping & printing)
+  * Standard: $59 (plus shipping)
+  * Premium: $79 (plus shipping)
+  * Limited Edition: $99 (plus shipping)
+- Enhanced shop page aesthetics:
+  * Added cotton texture background
+  * Improved tier card presentation with outlines and hover effects
+  * Made announcement banner sticky across all pages
+  * Added visual hierarchy with textures and shadows
+  * Improved package presentation with clear outlines and colors
+- Updated free shipping threshold to $120
+- Added responsive design improvements for mobile devices 
+
+[2024-03-22] Announcement Banner Position Update
+- Changed announcement banner from sticky to fixed position
+- Positioned banner at the very top of the website, above the navigation bar
+- Adjusted z-index values to ensure proper layering (banner above nav)
+- Added padding to main content to account for fixed banner
+- Ensured consistent appearance across all pages 
+
+[2024-03-23] Navigation and Announcement Banner Layout Refinement
+- Set fixed height for announcement banner (40px)
+- Changed navigation bar from sticky to fixed position
+- Positioned navigation bar directly below the announcement banner
+- Adjusted main content padding to account for both fixed elements (105px total)
+- Ensured both elements remain fully visible at all times
+- Improved overall page layout with proper spacing 
+
+[2024-03-24] Shop Page Design Enhancements
+- Enhanced button styles across the shop page:
+  * Added gradient hover effects
+  * Improved shadow and elevation
+  * Added uppercase text and letter spacing
+  * Enhanced hover animations
+  * Made buttons more prominent and on-brand
+- Improved founders tier design:
+  * Enhanced text contrast with white color
+  * Added subtle gradient overlay for depth
+  * Increased font sizes for better readability
+  * Added text shadows for improved legibility
+  * Enhanced badge design with better contrast
+  * Improved hover effects on all elements
+  * Made the CTA button more prominent with white background
+- Overall improvements to visual hierarchy and user experience 
+
+[2024-03-25] Founders Tier Enhancement
+- Added hoodie image to the founders tier card
+- Created a two-column layout for the founders tier with content on the left and image on the right
+- Linked the "Join Founders Program" button to the founders application section
+- Made the layout responsive for mobile devices
+- Maintained the clean design without adding shadows to the image 
+
+[2024-03-26] Product Toggle Implementation
+- Added product toggle component to switch between hoodies and t-shirts
+- Implemented CSS styles for the toggle with smooth animations and responsive design
+- Added JavaScript functionality to handle product switching
+- Updated shop section to support both product types with appropriate content visibility
+- Features:
+  - Clean, minimal toggle design with icon and text
+  - Smooth transition animations
+  - Responsive layout for mobile devices
+  - Automatic content switching based on selection
+  - Maintains existing design language and aesthetics
+  - Default selection set to hoodies
+  - Smooth scroll to top of shop section on toggle 

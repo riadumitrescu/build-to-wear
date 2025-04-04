@@ -145,4 +145,74 @@ document.addEventListener('DOMContentLoaded', () => {
 // Load structured data
 const structuredDataScript = document.createElement('script');
 structuredDataScript.src = 'js/structured-data.js';
-document.head.appendChild(structuredDataScript); 
+document.head.appendChild(structuredDataScript);
+
+// Product Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const productToggle = document.querySelector('.product-toggle__container');
+  const productOptions = document.querySelectorAll('.product-toggle__option');
+  const shopSection = document.querySelector('.section--shop');
+  
+  if (!productToggle || !productOptions.length || !shopSection) return;
+  
+  // Set initial state
+  shopSection.setAttribute('data-product', 'hoodie');
+  productToggle.setAttribute('data-active', 'hoodie');
+  
+  // Handle toggle clicks
+  productOptions.forEach(option => {
+    option.addEventListener('click', function() {
+      const productType = this.getAttribute('data-product');
+      
+      // Don't do anything if already active
+      if (productToggle.getAttribute('data-active') === productType) return;
+      
+      // Update active state
+      productOptions.forEach(opt => opt.classList.remove('product-toggle__option--active'));
+      this.classList.add('product-toggle__option--active');
+      
+      // Update container state
+      productToggle.setAttribute('data-active', productType);
+      
+      // Update shop section state with a slight delay for animation
+      setTimeout(() => {
+        shopSection.setAttribute('data-product', productType);
+        
+        // Smooth scroll to top of shop section
+        shopSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+      
+      // Add a subtle animation to the toggle
+      productToggle.classList.add('product-toggle__container--animating');
+      setTimeout(() => {
+        productToggle.classList.remove('product-toggle__container--animating');
+      }, 300);
+    });
+  });
+  
+  // Add touch swipe support for mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+  
+  productToggle.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+  }, false);
+  
+  productToggle.addEventListener('touchend', function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  }, false);
+  
+  function handleSwipe() {
+    const swipeThreshold = 50;
+    const currentProduct = productToggle.getAttribute('data-active');
+    
+    if (touchEndX < touchStartX - swipeThreshold && currentProduct === 'hoodie') {
+      // Swipe left - switch to t-shirt
+      productOptions[1].click();
+    } else if (touchEndX > touchStartX + swipeThreshold && currentProduct === 'tshirt') {
+      // Swipe right - switch to hoodie
+      productOptions[0].click();
+    }
+  }
+}); 
