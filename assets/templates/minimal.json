@@ -1,0 +1,16 @@
+{
+    "name": "Minimal",
+    "description": "A clean, minimal design template",
+    "elements": [
+        {
+            "type": "text",
+            "text": "MINIMAL",
+            "x": 400,
+            "y": 400,
+            "fontSize": 48,
+            "fontFamily": "Helvetica",
+            "fill": "#000000",
+            "align": "center"
+        }
+    ]
+} 

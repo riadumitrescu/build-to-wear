@@ -11,9 +11,21 @@
             "src": "/assets/favicon/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
+        },
+        {
+            "src": "/assets/favicon/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/favicon/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
         }
     ],
     "theme_color": "#F7F7F5",
     "background_color": "#F7F7F5",
-    "display": "standalone"
+    "display": "standalone",
+    "start_url": "/",
+    "orientation": "portrait"
 } 

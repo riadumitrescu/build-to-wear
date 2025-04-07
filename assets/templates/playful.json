@@ -1,0 +1,36 @@
+{
+    "name": "Playful",
+    "description": "A fun, playful design template",
+    "elements": [
+        {
+            "type": "text",
+            "text": "✨",
+            "x": 350,
+            "y": 350,
+            "fontSize": 48,
+            "fontFamily": "Arial",
+            "fill": "#FFD700",
+            "align": "center"
+        },
+        {
+            "type": "text",
+            "text": "PLAYFUL",
+            "x": 400,
+            "y": 400,
+            "fontSize": 48,
+            "fontFamily": "Comic Sans MS",
+            "fill": "#FF69B4",
+            "align": "center"
+        },
+        {
+            "type": "text",
+            "text": "✨",
+            "x": 450,
+            "y": 350,
+            "fontSize": 48,
+            "fontFamily": "Arial",
+            "fill": "#FFD700",
+            "align": "center"
+        }
+    ]
+} 

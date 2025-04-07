@@ -1,0 +1,27 @@
+{
+    "name": "Elegant",
+    "description": "A sophisticated, elegant design template",
+    "elements": [
+        {
+            "type": "text",
+            "text": "ELEGANT",
+            "x": 400,
+            "y": 380,
+            "fontSize": 56,
+            "fontFamily": "Times New Roman",
+            "fill": "#333333",
+            "align": "center"
+        },
+        {
+            "type": "text",
+            "text": "DESIGN",
+            "x": 400,
+            "y": 450,
+            "fontSize": 32,
+            "fontFamily": "Times New Roman",
+            "fill": "#666666",
+            "align": "center",
+            "fontStyle": "italic"
+        }
+    ]
+} 
