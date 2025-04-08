@@ -1,0 +1,24 @@
+{
+  "name": "build-to-wear",
+  "version": "1.0.0",
+  "description": "Build To Wear - Sustainable Fashion Innovation",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sustainable fashion",
+    "custom hoodies",
+    "custom t-shirts",
+    "fashion innovation",
+    "ethical manufacturing"
+  ],
+  "author": "Build To Wear",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1",
+    "@vercel/speed-insights": "^1.0.2",
+    "serve": "^14.2.1"
+  }
+}
