@@ -221,3 +221,16 @@ Notes
   * Created package.json for dependency management
 - Affects: Site-wide SEO and performance monitoring
 - Purpose: Improve search engine visibility and track performance metrics 
+
+[2024-03-26] Hero Section Background Image
+- Added background image assets/img/hoodiesbackground 1.png to the hero section.
+- Updated css/style.css to apply the image, set background-size to cover, and remove previous background styles/overlays.
+- Affects: Hero section visual appearance on index.html
+- Purpose: Enhance visual appeal of the hero section with a relevant background. 
+
+[2024-03-26] Founders Page Hero Section Update
+- Added background image assets/img/founders_background.webp to the founders page hero section
+- Updated text colors to white/cream white for better contrast against the background
+- Added subtle text shadows for improved readability
+- Affects: Founders page hero section visual appearance
+- Purpose: Enhance visual appeal and readability of the founders page hero section 
