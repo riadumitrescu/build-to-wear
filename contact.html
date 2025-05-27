@@ -46,6 +46,7 @@
             </a>
             <div class="nav__links">
                 <a href="/" class="nav__link">Home</a>
+                <a href="/shop.html" class="nav__link">Shop</a>
                 <a href="/founders.html" class="nav__link">For Founders</a>
                 <a href="/about.html" class="nav__link">About</a>
                 <a href="/contact.html" class="nav__link nav__link--active">Contact</a>
@@ -59,46 +60,13 @@
                 <h2>Get in Touch</h2>
                 <p class="text-center">Have a question or want to learn more? We'd love to hear from you.</p>
                 
-                <form class="form" action="https://formsubmit.co/buildtowear.com@gmail.com" method="POST">
-                    <!-- Honeypot -->
-                    <input type="text" name="_honey" style="display: none;">
-                    
-                    <!-- Disable Captcha -->
-                    <input type="hidden" name="_captcha" value="false">
-                    
-                    <!-- Success Page -->
-                    <input type="hidden" name="_next" value="https://buildtowear.com/thank-you.html">
-                    
-                    <!-- Email Template -->
-                    <input type="hidden" name="_template" value="table">
-                    
-                    <!-- Subject -->
-                    <input type="hidden" name="_subject" value="New Contact Form Submission - Build To Wear">
-                    
-                    <div class="form__group">
-                        <label for="name" class="form__label">Name</label>
-                        <input type="text" id="name" name="name" class="form__input" required>
-                    </div>
-                    
-                    <div class="form__group">
-                        <label for="email" class="form__label">Email</label>
-                        <input type="email" id="email" name="email" class="form__input" required>
-                    </div>
-                    
-                    <div class="form__group">
-                        <label for="subject" class="form__label">Subject</label>
-                        <input type="text" id="subject" name="subject" class="form__input" required>
-                    </div>
-                    
-                    <div class="form__group">
-                        <label for="message" class="form__label">Message</label>
-                        <textarea id="message" name="message" class="form__input form__input--textarea" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn--large">
-                        Send Message
-                    </button>
-                </form>
+                <div class="contact-direct text-center" style="margin: 3rem auto; max-width: 600px; padding: 2rem; background-color: var(--color-paper-alt); border-radius: 0.75rem; box-shadow: 0 4px 16px rgba(139, 115, 85, 0.07);">
+                    <h3 style="margin-bottom: 1rem; color: var(--color-accent);">Contact Us</h3>
+                    <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">Email us directly at:</p>
+                    <a href="mailto:buildtowear@gmail.com" class="link" style="font-size: 1.4rem; font-weight: 500;">buildtowear@gmail.com</a>
+                    <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--color-ink-light);">We typically respond within 24-48 hours.</p>
+                </div>
+                
             </div>
         </section>
     </main>

@@ -234,3 +234,54 @@ Notes
 - Added subtle text shadows for improved readability
 - Affects: Founders page hero section visual appearance
 - Purpose: Enhance visual appeal and readability of the founders page hero section 
+
+Redesigned product toggle buttons to match brand: pill shape, accent color, tactile hover, soft cream background, minimal look. Changed all 'Add to Cart' buttons to 'Buy Now' and linked to mock Stripe payment. Affects shop.html and css/style.css. 
+
+[2024-04-02] Product Toggle Premium Refinement
+- Refined the hoodie/t-shirt product toggle for a more premium, intentional look:
+  * Increased horizontal and vertical padding for each option
+  * Added more space between options for clarity and touch comfort
+  * Made pill shape more pronounced and visually soft
+  * Increased font and icon size for better balance
+  * Added a soft vertical divider between options (not a harsh line)
+  * Ensured perfect vertical alignment of icons and text
+  * Added gentle lift/shadow for active state
+  * Added micro-interaction (scale up) on hover/active
+  * Improved responsiveness for mobile and desktop
+- Affects: css/style.css, shop.html UI 
+
+[2024-04-02] Tier and Icon Consistency Update
+- Changed all instances of 'Elite' tier to 'Personal' for clarity and approachability
+- Updated product toggle button icons to use on-brand inline SVGs for hoodie and t-shirt (replacing emojis)
+- Affects: shop.html, UI consistency, accessibility 
+
+Contact Form Email Fixes
+-----------------------
+- Fixed email address format in contact form
+- Added proper reply-to functionality
+- Added auto-reply confirmation
+- Updated success page URL to use relative path
+- Added additional security measures
+- Impact: Contact page functionality
+- Status: Completed 
+
+[2024-06-09] Updated all 'Buy Now' and founders buttons in shop.html to use the real Stripe payment links provided (8 total, mapped to Founders Hoodie, Founders T-Shirt, Standard Hoodie, Standard T-Shirt, Premium Hoodie, Premium T-Shirt, Personal Hoodie, Personal T-Shirt). Each button now opens in a new tab for better UX. This ensures a frictionless, trustworthy purchase flow and consistency across all tiers. Affected: shop.html purchase buttons. 
+
+[2024-06-09] Navigation and Contact Page Updates
+- Added "Shop" link to navigation bar on all pages (index, shop, founders, about, contact, thank-you, 404)
+- Added direct contact email section to contact.html with a mailto link to buildtowear@gmail.com
+- Improved UX by making it easier for users to find the shop and contact the team directly
+- Affects: All pages with navigation bars and contact.html 
+
+[2024-06-09] Contact Page Simplification and Home Page Shop Section
+- Removed contact form from contact.html, replacing it with a more prominent direct email contact section
+- Added a new "Shop Our Collection" section to the home page after the process section
+- Created a responsive grid layout for showcasing hoodies and t-shirts in the shop preview
+- Added hover effects and animations to the shop preview items
+- Added direct links to the shop page from the home page
+- Improved UX by simplifying the contact process and increasing shop visibility
+- Affects: contact.html, index.html, css/style.css 
+
+- Replaced SVG icons in the product toggle (hoodie/t-shirt) on shop.html with hoodieicon.png and tshirticon.png from assets/img/.
+- Why: To use custom, branded icons for better visual clarity and brand consistency.
+- Affects: Shop page product toggle buttons (hoodie/t-shirt selector). 

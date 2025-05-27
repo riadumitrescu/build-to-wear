@@ -48,6 +48,7 @@
             </a>
             <div class="nav__links">
                 <a href="/" class="nav__link">Home</a>
+                <a href="/shop.html" class="nav__link nav__link--active">Shop</a>
                 <a href="/founders.html" class="nav__link">For Founders</a>
                 <a href="/about.html" class="nav__link">About</a>
                 <a href="/contact.html" class="nav__link">Contact</a>
@@ -63,13 +64,17 @@
                 
                 <!-- Product Toggle -->
                 <div class="product-toggle">
-                    <div class="product-toggle__container">
+                    <div class="product-toggle__container" data-active="hoodie">
                         <button class="product-toggle__option product-toggle__option--active" data-product="hoodie">
-                            <span class="product-toggle__icon">🧥</span>
+                            <span class="product-toggle__icon">
+                                <img src="/assets/img/hoodieicon.png" alt="Hoodie" />
+                            </span>
                             <span class="product-toggle__text">Hoodie</span>
                         </button>
                         <button class="product-toggle__option" data-product="tshirt">
-                            <span class="product-toggle__icon">👕</span>
+                            <span class="product-toggle__icon">
+                                <img src="/assets/img/tshirticon.png" alt="T-Shirt" />
+                            </span>
                             <span class="product-toggle__text">T-Shirt</span>
                         </button>
                     </div>
@@ -79,7 +84,7 @@
                 <div class="tier-card tier-card--founders">
                     <div class="tier-card__badge">Limited Time</div>
                     <div class="tier-card__content">
-                        <h2 class="tier-card__title">Founders Tier</h2>
+                        <h2 class="tier-card__title">Founders Tier (Accepted Application Only)</h2>
                         <div class="tier-card__price">
                             <span class="tier-card__price-amount">$45</span>
                             <span class="tier-card__price-note">+ shipping & printing</span>
@@ -98,12 +103,13 @@
                             <li>Founders-only community access</li>
                             <li>Lifetime discount on future products</li>
                         </ul>
-                        <a href="/founders.html#apply" class="button button--primary button--large">Join Founders Program</a>
+                        <a href="https://buy.stripe.com/cN25nzcXDdvPfao5km" class="button button--primary button--large tier-card__button--hoodie" target="_blank" rel="noopener">Buy Now</a>
+                        <a href="https://buy.stripe.com/8wM6rD5vbdvP6DS9AD" class="button button--primary button--large tier-card__button--tshirt" target="_blank" rel="noopener">Buy Now</a>
                         <p class="tier-card__note">Limited to first 10 founders</p>
                     </div>
                     <div class="tier-card__image">
                         <img src="/assets/mockups/unisex-premium-hoodie-black-back-67f030688d789.png" alt="Build to Wear Founders Hoodie" class="tier-card__image--hoodie">
-                        <img src="/assets/mockups/unisex-premium-tshirt-black-front-67f030688d789.png" alt="Build to Wear Founders T-Shirt" class="tier-card__image--tshirt">
+                        <img src="/assets/img/tshirtfounders.png" alt="Build to Wear Founders T-Shirt" class="tier-card__image--tshirt">
                     </div>
                 </div>
                 
@@ -128,8 +134,8 @@
                             <li>Ethically manufactured</li>
                             <li>Free shipping on orders over $120</li>
                         </ul>
-                        <a href="#" class="button button--secondary tier-card__button--hoodie">Add to Cart</a>
-                        <a href="#" class="button button--secondary tier-card__button--tshirt">Add to Cart</a>
+                        <a href="https://buy.stripe.com/7sI8zLg9PbnHbYc9AE" class="button button--secondary tier-card__button--hoodie" target="_blank" rel="noopener">Buy Now</a>
+                        <a href="https://buy.stripe.com/28o03fbTz4ZjbYc28f" class="button button--secondary tier-card__button--tshirt" target="_blank" rel="noopener">Buy Now</a>
                     </div>
                     
                     <div class="tier-card tier-card--popular">
@@ -154,15 +160,15 @@
                             <li>Free shipping</li>
                             <li>Exclusive design elements</li>
                         </ul>
-                        <a href="#" class="button button--primary tier-card__button--hoodie">Add to Cart</a>
-                        <a href="#" class="button button--primary tier-card__button--tshirt">Add to Cart</a>
+                        <a href="https://buy.stripe.com/8wM9DP1eV9fz7HW4gl" class="button button--primary tier-card__button--hoodie" target="_blank" rel="noopener">Buy Now</a>
+                        <a href="https://buy.stripe.com/28o03fbTz4ZjbYc28f" class="button button--primary tier-card__button--tshirt" target="_blank" rel="noopener">Buy Now</a>
                     </div>
                     
                     <div class="tier-card tier-card--outline">
-                        <h2 class="tier-card__title">Elite</h2>
+                        <h2 class="tier-card__title">Personal</h2>
                         <div class="tier-card__price">
                             <span class="tier-card__price-amount tier-card__price-amount--hoodie">$149</span>
-                            <span class="tier-card__price-amount tier-card__price-amount--tshirt">$69</span>
+                            <span class="tier-card__price-amount tier-card__price-amount--tshirt">$98</span>
                             <span class="tier-card__price-note">+ shipping</span>
                         </div>
                         <ul class="tier-card__features tier-card__features--hoodie">
@@ -181,8 +187,8 @@
                             <li>Exclusive design elements</li>
                             <li>Limited to 10 pieces</li>
                         </ul>
-                        <a href="#" class="button button--secondary tier-card__button--hoodie">Add to Cart</a>
-                        <a href="#" class="button button--secondary tier-card__button--tshirt">Add to Cart</a>
+                        <a href="https://buy.stripe.com/14k3fr9Lr0J31jy14a" class="button button--secondary tier-card__button--hoodie" target="_blank" rel="noopener">Buy Now</a>
+                        <a href="https://buy.stripe.com/3cs6rD8HnezT3rG4gp" class="button button--secondary tier-card__button--tshirt" target="_blank" rel="noopener">Buy Now</a>
                     </div>
                 </div>
                 
@@ -193,7 +199,7 @@
                     <div class="product-details__grid">
                         <div class="product-details__image">
                             <img src="/assets/mockups/folded_hoodie.png" alt="Build to Wear Hoodie" class="image image--rounded product-details__image--hoodie">
-                            <img src="/assets/mockups/folded_tshirt.png" alt="Build to Wear T-Shirt" class="image image--rounded product-details__image--tshirt">
+                            <img src="/assets/img/tshirtfolded.png" alt="Build to Wear T-Shirt" class="image image--rounded product-details__image--tshirt">
                         </div>
                         <div class="product-details__content">                            
                             <h3 class="heading heading--3">Ethical Manufacturing</h3>
@@ -210,5 +216,49 @@
 
     <!-- Scripts -->
     <script src="/js/main.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const container = document.querySelector('.product-toggle__container');
+        const options = document.querySelectorAll('.product-toggle__option');
+        const hoodieElements = document.querySelectorAll('[class*="--hoodie"]');
+        const tshirtElements = document.querySelectorAll('[class*="--tshirt"]');
+
+        // Get the product parameter from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productParam = urlParams.get('product');
+
+        // Function to switch to a product
+        function switchToProduct(product) {
+            // Remove active class from all options
+            options.forEach(opt => opt.classList.remove('product-toggle__option--active'));
+            
+            // Find and activate the correct option
+            const targetOption = Array.from(options).find(opt => opt.dataset.product === product);
+            if (targetOption) {
+                targetOption.classList.add('product-toggle__option--active');
+                container.dataset.active = product;
+
+                // Show/hide elements
+                if (product === 'hoodie') {
+                    hoodieElements.forEach(el => el.style.display = '');
+                    tshirtElements.forEach(el => el.style.display = 'none');
+                } else {
+                    hoodieElements.forEach(el => el.style.display = 'none');
+                    tshirtElements.forEach(el => el.style.display = '');
+                }
+            }
+        }
+
+        // Initially switch to the product from URL parameter, or default to hoodie
+        switchToProduct(productParam === 'tshirt' ? 'tshirt' : 'hoodie');
+
+        // Add click handlers
+        options.forEach(option => {
+            option.addEventListener('click', function() {
+                switchToProduct(this.dataset.product);
+            });
+        });
+    });
+    </script>
 </body>
 </html> 

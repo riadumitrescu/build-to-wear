@@ -1195,7 +1195,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238B7355' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4l-2-2V0h-4v36l-4-4-2 2v2l4 4v2l-4 4v2l4 4v4h4v-4l4-4v-2l-4-4v-2l4-4v-2l-4-4zm0-30V0h-4v4h4zM6 34v-4L0 28v-2l4-4V0h4v36l-4-4-2 2v2l4 4v2l-4 4v2l4 4v4h4v-4l4-4v-2l-4-4v-2l4-4v-2l-4-4zM6 4V0H2v4h4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238B7355' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4l-2-2V0h-4v36l-4-4-2 2v2l4 4v2l-4 4v4h4v-4l4-4v-2l-4-4v-2l4-4v-2l-4-4zm0-30V0h-4v4h4zM6 34v-4L0 28v-2l4-4V0h4v36l-4-4-2 2v2l4 4v2l-4 4v2l4 4v4h4v-4l4-4v-2l-4-4v-2l4-4v-2l-4-4zM6 4V0H2v4h4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   opacity: 0.5;
 }
 
@@ -2077,7 +2077,7 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after, p::after, li::
     font-size: 1.1rem;
 }
 
-/* Product Toggle */
+/* Product Toggle - Enhanced */
 .product-toggle {
   margin: 2.5rem 0 3.5rem;
   display: flex;
@@ -2085,193 +2085,177 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after, p::after, li::
 }
 
 .product-toggle__container {
-  position: relative;
+  background: var(--color-paper);
+  border: 1.5px solid var(--color-accent);
+  border-radius: 999px;
+  padding: 4px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--color-background);
-  border-radius: 12px;
-  padding: 0.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  gap: 4px;
+  position: relative;
+  width: fit-content;
+  box-shadow: 0 2px 8px rgba(139, 115, 85, 0.1);
 }
 
-.product-toggle__container--animating {
-  transform: scale(0.98);
-  opacity: 0.9;
+/* The sliding background */
+.product-toggle__container::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  background: linear-gradient(135deg, #8B7355 0%, #A88B6D 100%);
+  border-radius: 999px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(139, 115, 85, 0.2);
+}
+
+/* Move the background when t-shirt is active */
+.product-toggle__container[data-active="tshirt"]::before {
+  transform: translateX(calc(100% + 4px));
 }
 
 .product-toggle__option {
   position: relative;
-  flex: 1;
+  z-index: 1;
+  padding: 10px 28px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
+  gap: 10px;
+  border: none;
+  background: none;
+  border-radius: 999px;
+  font-size: 1rem;
   font-weight: 500;
-  color: var(--color-text);
+  color: var(--color-gray-600);
   cursor: pointer;
   transition: all 0.3s ease;
-  z-index: 1;
-}
-
-.product-toggle__option--active {
-  color: var(--color-background);
-}
-
-.product-toggle__option::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--color-primary);
-  border-radius: 8px;
-  transform: scale(0);
-  transition: transform 0.3s ease;
-  z-index: -1;
-}
-
-.product-toggle__option--active::before {
-  transform: scale(1);
+  min-width: 120px;
+  justify-content: center;
 }
 
 .product-toggle__icon {
   width: 24px;
   height: 24px;
-  margin-right: 0.75rem;
-  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.product-toggle__option:hover .product-toggle__icon {
+.product-toggle__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+/* Active state */
+.product-toggle__option--active {
+  color: white;
+}
+
+.product-toggle__option--active .product-toggle__icon img {
+  opacity: 1;
+  filter: brightness(0) invert(1);
   transform: scale(1.1);
 }
 
-.product-toggle__text {
-  position: relative;
-}
-
-.product-toggle__option--active .product-toggle__text::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--color-accent);
-  border-radius: 1px;
-}
-
-/* Product Toggle Animation */
-.product-toggle__container::before {
-  content: '';
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  width: calc(50% - 0.5rem);
-  height: calc(100% - 1rem);
-  background: white;
-  border-radius: 2.5rem;
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-normal);
-  z-index: 1;
-}
-
-.product-toggle__container[data-active="tshirt"]::before {
-  transform: translateX(100%);
-}
-
-/* Product Content Visibility */
-.tier-card__features--tshirt,
-.tier-card__image--tshirt,
-.tier-card__price-amount--tshirt,
-.tier-card__button--tshirt,
-.product-details__title--tshirt,
-.product-details__image--tshirt,
-.product-details__text--tshirt {
-  display: none;
-  opacity: 0;
-  transition: opacity var(--transition-normal);
-}
-
-/* Show t-shirt content when t-shirt is selected */
-[data-product="tshirt"] .tier-card__features--tshirt,
-[data-product="tshirt"] .tier-card__image--tshirt,
-[data-product="tshirt"] .tier-card__price-amount--tshirt,
-[data-product="tshirt"] .tier-card__button--tshirt,
-[data-product="tshirt"] .product-details__title--tshirt,
-[data-product="tshirt"] .product-details__image--tshirt,
-[data-product="tshirt"] .product-details__text--tshirt {
-  display: block;
-  opacity: 1;
-}
-
-/* Hide hoodie content when t-shirt is selected */
-[data-product="tshirt"] .tier-card__features--hoodie,
-[data-product="tshirt"] .tier-card__image--hoodie,
-[data-product="tshirt"] .tier-card__price-amount--hoodie,
-[data-product="tshirt"] .tier-card__button--hoodie,
-[data-product="tshirt"] .product-details__title--hoodie,
-[data-product="tshirt"] .product-details__image--hoodie,
-[data-product="tshirt"] .product-details__text--hoodie {
-  display: none;
-  opacity: 0;
-}
-
-/* Show hoodie content when hoodie is selected */
-[data-product="hoodie"] .tier-card__features--hoodie,
-[data-product="hoodie"] .tier-card__image--hoodie,
-[data-product="hoodie"] .tier-card__price-amount--hoodie,
-[data-product="hoodie"] .tier-card__button--hoodie,
-[data-product="hoodie"] .product-details__title--hoodie,
-[data-product="hoodie"] .product-details__image--hoodie,
-[data-product="hoodie"] .product-details__text--hoodie {
-  display: block;
-  opacity: 1;
-}
-
-/* Hide t-shirt content when hoodie is selected */
-[data-product="hoodie"] .tier-card__features--tshirt,
-[data-product="hoodie"] .tier-card__image--tshirt,
-[data-product="hoodie"] .tier-card__price-amount--tshirt,
-[data-product="hoodie"] .tier-card__button--tshirt,
-[data-product="hoodie"] .product-details__title--tshirt,
-[data-product="hoodie"] .product-details__image--tshirt,
-[data-product="hoodie"] .product-details__text--tshirt {
-  display: none;
-  opacity: 0;
-}
-
-/* Product Toggle Hover Effects */
-.product-toggle__option:hover {
+/* Hover state */
+.product-toggle__option:hover:not(.product-toggle__option--active) {
   color: var(--color-accent);
-  transform: translateY(-2px);
 }
 
-.product-toggle__option--active:hover {
-  color: var(--color-ink);
+.product-toggle__option:hover:not(.product-toggle__option--active) .product-toggle__icon img {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
-/* Responsive Styles for Product Toggle */
-@media (max-width: 768px) {
-  .product-toggle__option {
-    padding: 0.75rem 1.5rem;
-    font-size: 1.1rem;
-  }
-  
-  .product-toggle__icon {
-    font-size: 1.3rem;
-  }
-  
-  .product-toggle__container {
-    max-width: 350px;
-  }
+/* Remove the underline effect since we have the sliding highlight */
+.product-toggle__option--active .product-toggle__text::after {
+  display: none;
 }
 
 /* Remove remaining footer classes */
 .footer__content,
 .footer__links {
     display: none !important;
+}
+
+/* Shop Preview Section */
+.shop-preview {
+    margin-top: 3rem;
+}
+
+.shop-preview__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.shop-preview__item {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-paper);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(139, 115, 85, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop-preview__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(139, 115, 85, 0.12);
+}
+
+.shop-preview__image {
+    height: 320px;
+    overflow: hidden;
+    background-color: var(--color-paper-alt);
+}
+
+.shop-preview__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.shop-preview__item:hover .shop-preview__image img {
+    transform: scale(1.05);
+}
+
+.shop-preview__content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.shop-preview__content h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+}
+
+.shop-preview__content p {
+    margin-bottom: 1.5rem;
+    color: var(--color-ink);
+}
+
+.shop-preview__cta {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .shop-preview__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .shop-preview__image {
+        height: 280px;
+    }
 } 
