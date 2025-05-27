@@ -29,6 +29,84 @@
     <meta name="msapplication-TileColor" content="#F7F7F5">
     <meta name="theme-color" content="#F7F7F5">
     <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .about-section {
+            padding: 100px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 4.5rem;
+            margin-bottom: 4rem;
+            color: #1a1a1a;
+            line-height: 1.1;
+        }
+
+        .about-content {
+            font-size: 1.375rem;
+            line-height: 1.6;
+            color: #2c2c2c;
+            font-weight: 300;
+            max-width: 1000px;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .opening-question {
+            font-size: 2.5rem;
+            line-height: 1.3;
+            color: #1a1a1a;
+            margin: 2.5rem 0;
+            max-width: 900px;
+        }
+
+        .story-block {
+            margin: 2.5rem 0;
+            padding-left: 3rem;
+            border-left: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .mission-statement {
+            font-size: 2rem;
+            line-height: 1.4;
+            color: #1a1a1a;
+            margin: 3rem 0;
+            max-width: 900px;
+        }
+
+        .manifesto {
+            margin: 3rem 0;
+        }
+
+        .manifesto p {
+            font-size: 1.375rem;
+            line-height: 1.5;
+            margin-bottom: 0.25rem;
+        }
+
+        .closing-statement {
+            margin: 3rem 0;
+            font-size: 2rem;
+            line-height: 1.4;
+            color: #1a1a1a;
+            max-width: 900px;
+        }
+
+        .closing-statement p {
+            margin-bottom: 0.5rem;
+        }
+
+        .divider {
+            width: 120px;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.08);
+            margin: 3rem 0;
+        }
+    </style>
 </head>
 <body>
     <div class="announcement">
@@ -47,7 +125,6 @@
             <div class="nav__links">
                 <a href="/" class="nav__link">Home</a>
                 <a href="/shop.html" class="nav__link">Shop</a>
-                <a href="/founders.html" class="nav__link">For Founders</a>
                 <a href="/about.html" class="nav__link nav__link--active">About</a>
                 <a href="/contact.html" class="nav__link">Contact</a>
             </div>
@@ -55,37 +132,43 @@
     </nav>
 
     <main class="main">
-        <section class="section section--about">
+        <section class="about-section">
             <div class="container">
-                <h1 class="heading heading--1">About Build to Wear</h1>
-                <div class="about__content">
-                    <div class="about__text">
-                        <p class="text text--large">Build to Wear is a platform dedicated to supporting and empowering fashion entrepreneurs who are building sustainable, innovative, and meaningful brands.</p>
-                        <p class="text">Our mission is to help founders navigate the complex world of fashion entrepreneurship by providing resources, connections, and opportunities to grow their businesses.</p>
-                        <p class="text">We believe in the power of sustainable fashion and its ability to create positive change in the industry. Through our platform, we connect founders with mentors, investors, and like-minded entrepreneurs who share their vision.</p>
+                <h1>About Build to Wear</h1>
+                
+                <div class="about-content">
+                    <p>Build to Wear started with a simple question:</p>
+                    
+                    <div class="opening-question">
+                        "Why do portfolios only live on screens?"
                     </div>
-                    <div class="about__image">
-                        <img src="/assets/mockups/folded_hoodie.png" alt="Build to Wear Hoodie" class="image image--rounded">
+                    
+                    <div class="story-block">
+                        <p>As a designer and builder, I wanted something more personal—something that didn't just sit in a browser tab or get lost in a Google Drive folder. I wanted to wear my work. I wanted it to spark conversations. To remind me what I stand for. To help others understand me at a glance.</p>
+                        <p>That's how Build to Wear began.</p>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="section section--values">
-            <div class="container">
-                <h2 class="heading heading--2">Our Values</h2>
-                <div class="values__grid">
-                    <div class="value-card">
-                        <h3 class="heading heading--3">Sustainability</h3>
-                        <p class="text">We believe in creating fashion that respects both people and the planet.</p>
+                    <div class="mission-statement">
+                        We create custom-made hoodies that showcase your work, story, and creative identity. It's part portfolio, part uniform, part reminder of what you're building and why.
                     </div>
-                    <div class="value-card">
-                        <h3 class="heading heading--3">Innovation</h3>
-                        <p class="text">We support founders who are pushing boundaries and redefining what's possible in fashion.</p>
+
+                    <p>Each hoodie is designed with you—from layout to typography, from color to message. Whether you're a founder, designer, artist, or engineer, we help you translate your process, values, and voice into a wearable piece you'll actually live in.</p>
+
+                    <div class="divider"></div>
+                    
+                    <div class="manifesto">
+                        <p>It's not merch.</p>
+                        <p>It's not print-on-demand fluff.</p>
+                        <p>It's a physical extension of your creative self.</p>
                     </div>
-                    <div class="value-card">
-                        <h3 class="heading heading--3">Community</h3>
-                        <p class="text">We foster a supportive environment where founders can learn, grow, and succeed together.</p>
+
+                    <div class="divider"></div>
+                    
+                    <p>We only release a few hoodie slots at a time so we can go deep, not wide. Every hoodie is a collaboration. Every stitch says something.</p>
+                    
+                    <div class="closing-statement">
+                        <p>Because your work deserves to be seen.</p>
+                        <p>And sometimes, a hoodie can say more than a slide deck ever could.</p>
                     </div>
                 </div>
             </div>
