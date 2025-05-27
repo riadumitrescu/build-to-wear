@@ -45,6 +45,9 @@
     <meta name="msapplication-TileColor" content="#F7F7F5">
     <meta name="theme-color" content="#F7F7F5">
     
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="/assets/img/backgroundhoodies.webp" fetchpriority="high">
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,7 +110,6 @@
             <div class="nav__links">
                 <a href="/" class="nav__link nav__link--active">Home</a>
                 <a href="/shop.html" class="nav__link">Shop</a>
-                <a href="/founders.html" class="nav__link">For Founders</a>
                 <a href="/about.html" class="nav__link">About</a>
                 <a href="/contact.html" class="nav__link">Contact</a>
             </div>
@@ -119,7 +121,7 @@
         <div class="container hero__content">
             <h1 class="fade-in">10 Creators. 10 Stories. One Hoodie at a Time.</h1>
             <p class="fade-in">We turn your creative journey into something you can wear.</p>
-            <a href="/founders.html#apply" class="btn btn--large fade-in">Apply for Founders Drop</a>
+            <a href="/shop.html" class="btn btn--large fade-in">Join Founders Drop</a>
         </div>
         <div class="hero__background">
             <div class="hero__pattern"></div>
@@ -201,8 +203,8 @@
             </div>
 
             <div class="cta fade-in">
-                <a href="/founders.html#apply" class="btn btn--large">Apply Now</a>
-                <button class="btn btn--secondary btn--large" onclick="copyToClipboard('Hey! Check this out — Build to Wear is creating custom hoodies based on people\'s work. They\'re picking 10 creators right now. You should apply! → https://buildtowear.com')">
+                <a href="/shop.html" class="btn btn--large">Join Now</a>
+                <button class="btn btn--secondary btn--large" onclick="copyToClipboard('Quick! Build to Wear is creating custom hoodies for just 10 creators (first come, first served). They turn your work into wearable art. Check it out! → https://buildtowear.com')">
                     Invite a Friend
                 </button>
             </div>

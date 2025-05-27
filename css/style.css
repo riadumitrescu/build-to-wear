@@ -326,6 +326,9 @@ p {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  will-change: transform;
+  contain: layout paint;
+  background-color: var(--color-paper);
 }
 
 .hero__content {
@@ -383,6 +386,7 @@ p {
   
   .hero {
     padding: var(--space-lg) 0;
+    background-image: url('/assets/img/backgroundhoodies-mobile.webp');
   }
 }
 
@@ -1883,6 +1887,31 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after, p::after, li::
     opacity: 0.8;
     margin-top: 1rem;
     font-style: italic;
+}
+
+.tier-card__description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-text);
+    margin: 1rem 0;
+    max-width: 600px;
+}
+
+.availability-notice {
+    background: var(--color-paper);
+    border: 1px solid var(--color-cream);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.availability-notice p {
+    color: var(--color-text);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
 }
 
 .tier-grid {
